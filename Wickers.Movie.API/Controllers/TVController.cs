@@ -54,20 +54,21 @@ namespace Wickers.Movie.API.Controllers
         //
         //////////////////////////
        
+
         // Insert TV Show
 
-        //[HttpPost]
-        //public async Task<IActionResult> InsertShows([FromQuery] TVModel Model)
-        //{
-        //    try
-        //    {
-        //        var results = await _services.Insert(Model);
-        //        return Ok(results);
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        return base.InteralServer(e);
-        //    }
-        //}
+        [HttpPost]
+        public async Task<IActionResult> InsertShows([FromQuery] TVModel Model)
+        {
+            try
+            {
+                var results = await _services.Insert(Model);
+                return Ok(results);
+            }
+            catch (Exception e)
+            {
+                return base.InteralServer(e);
+            }
+        }
     }
 }
